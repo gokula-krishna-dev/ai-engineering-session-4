@@ -1,6 +1,9 @@
 ## Project setup
 
 ```
+conda create -n session-4
+conda activate session-4
+conda install python=3.14 
 python -m pip install fastmcp
 ```
 
@@ -8,13 +11,4 @@ python -m pip install fastmcp
 ```
 fastmcp run main.py:mcp --transport http --port 8000
 python client.py
-```
-
-## Deploy to live server
-```
-python -m pip install uv
-uvx prefect-cloud login
-uvx prefect-cloud github setup
-uvx prefect-cloud deploy main.py:mcp --from gokula-krishna-dev/ai-engineering-session-4 --name hello --with fastmcp
-uvx prefect-cloud run greet/hello
 ```
